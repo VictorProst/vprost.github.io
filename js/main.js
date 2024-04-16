@@ -233,8 +233,8 @@
 		contentWayPoint();
 	});
     
-
 }());
+
 
 //Link to Another Page
     
@@ -310,6 +310,7 @@ $(document).keydown( function(eventObject) {
         $('.owl-next').click();//emulates click on next button
     }
 } );
+
 
 // GA to retreive data about the website
 

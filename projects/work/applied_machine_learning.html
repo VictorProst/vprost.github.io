@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	
+    <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Victor, Prost, mit">
+    <!-- Webpage title-->
+	<title>Victor Prost</title>
+
+	<!-- Icon on tab -->
+	<link rel="shortcut icon" href="../../images/logo.png">
+
+    <!-- Font Input -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../../css/animate.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="../../css/flexslider.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	
+	
+	<div id="fh5co-page">
+	    <!------------------------------------------------
+                    Header and NavBar
+        -------------------------------------------------->
+        <header id="navbar" role="banner">
+            <div class="container">
+                <div class="navbar-items">
+                    <a href="../../index.html" class="navbar-left"><img src="../../images/logo.png"></a>
+                    <h1><a href="../../index.html">Victor Prost</a></h1>
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="../../index.html" target ="_top">Home</a></li>
+                            <li class="dropdown"><a href="../../projects.html">Projects</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="../../work.html">Work</a></li><br>
+                                <li><a href="../../teaching.html">Teaching</a></li>
+                                <li><a href="../../personal.html">Personal Projects</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="../../publications.html">Publications</a></li>
+                            <li><a href="../../about.html">About Me</a></li>
+                        </ul>
+                    </nav>
+                </div>
+           </div>
+        
+        </header>         
+	
+       <!------------------------------------------------
+                       Course Description
+        -------------------------------------------------->
+        <div class="section animated fadeInUp">
+            <div class="container">
+                
+                <h1 style="margin-bottom: 30px"><span>Applied Machine Learning</span></h1>
+                <h4 style="text-align: right; margin-right: 5%; font-weight: 400; font-style: italic">January - May 2019</h4>
+                <br>
+                
+                <div class="row projects">
+                    <!-- Photo -->
+                    <div class="col-md-5" style="padding-top: 20px">
+                        <img src="../../images/work/applied_machine_learning/foot_design_space.JPG">
+                    </div>
+                    
+                 
+                    <!-- Description -->
+                    <div class="col-md-7">
+                         <p>Leveraging machine learning technics, I developed an automated and flexible design framework to customize affordable high performance passive prosthetic feet that enable users to replicate close to natural walking motions. Using structural optimization and biomechanical models, I applied variable reduction techniques to select the most appropriate design space parameters, clustering algorithms to provide designers a set of diverse optimal prosthetic foot design options and combined surrogate models with sampling techniques to generate and evaluate prosthetic feet in high performance regions of the design space. </p>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <h5>CONTRIBUTIONS</h5>
+                            <h5 style="margin-bottom: 0pt">Dimensionality Reduction</h5>
+                            <h5 style="margin-bottom: 0pt">Design Clustering</h5>
+                            <h5 style="margin-bottom: 0pt">Bayesian Optimization</h5>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                
+                <!-- Text Module 1 -->
+                <div class="row projects">
+                    <!-- Description -->
+                    <div class="col-md-6 ">
+                        <h3>Design Variable Reduction Using PCA</h3> 
+                        <p>Design frameworks for prosthetic feet are usually based on parametric models with a multitude of design parameters. These high dimensional design spaces are inefficient and ill-defined with a majority of the designs being non-physical or poor performing. This makes the design process for a prosthetic foot slow with no guarantee of high performance, preventing these frameworks to be used responsively. Recent work on design variable transformation using principal component analysis (PCA) by Yonekura (2014) and Brown (2019) enabled design space dimensionality reduction that discard ill-defined designs and improve the design process.</p>
+                        
+                        <p>I used PCA to reduce the number of design variables for this prosthetic foot model from 12 to 6 while keeping 79.8% of the variance in high-performance design space regions. This reduction of parameters describing a prosthetic foot enabled a 5.4 time reduction in optimization time while achieving 94% of the optimal performance score. The process followed for this work was:</p>
+                        <li>Sampled 10 millions prosthetic foot designs.</li>
+                        <li>Filtered the designs for high-performance viable prosthetic feet.</li>
+                        <li>Applied PCA techniques to uncover 'eigen' vectors/designs.</li>
+                        <li>Selected the eigen vectors that best describe the high-performant design space regions. </li>
+                        <li>Used these eigen vectors as reduced parametric model in the optimization framework. </li>
+                    </div>
+                    
+                    <!-- Photo -->
+                    <div class="col-md-6" style="padding-top: 50px">
+                        <img src="../../images/work/applied_machine_learning/variable_reduction.jpg">
+                    </div>
+                </div>
+                
+                <!-- Text Module 2 -->
+                <div class="row projects">
+                    <!-- Photo -->
+                    <div class="col-md-6" style="padding-top: 20px">
+                        <img src="../../images/work/applied_machine_learning/clustering.jpg">
+                    </div>
+                
+                    <!-- Description -->
+                    <div class="col-md-6 ">
+                        <h3>High Performance Design Clustering</h3> 
+                        <p>To allow for more flexibility in the design process, K-means clustering techniques were used to analyze the large amount of designs evaluated by the optimizer during the optimization process. Thus providing the designer with not only one optimal design but a set of high performing designs with distinct features.</p>
+                        <p>K-means clustering algorithms were ran with different target cluster sizes. Using the elbow method, 3 clusters were chosen to best describe the library/variety of prosthetic feet designs and the most performant design was selected from each cluster. These 3 designs displayed different geometries with similar performance scores.</p>
+                    </div>
+                </div>
+                
+                <!-- Text Module 1 -->
+                <div class="row" style="padding-bottom: 20px">
+                    <!-- Description -->
+                    <div class="col-md-8 ">
+                        <h3>Bayesian Optimization</h3> 
+                        <p>As an alternative to the traditional evolutionary algorithm for optimization schemes, a Bayesian optimizer that combines surrogate modelling estimates along with efficient sampling techniques was used to select high-performance prosthetic feet. A Bayesian optimizer builds/updates an estimate of the performance landscape of the design space for each design that is sampled and evaluated by the algorithm. Using that performance landscape estimate, it is then able to efficiently sample the next design in high-performance regions of the design space.</p>
+                        
+                        <p>After training the surrogate model using bayesian optimization techniques, the performance landscape estimate enabled the algorithm to sample 28% more high-performance designs than the evolutionary algorithm.</p>
+                    </div>
+                    
+                    <!-- Photo -->
+                    <div class="col-md-4" style="padding-top: 20px">
+                        <img src="../../images/work/applied_machine_learning/bayesian_optimization.jpg">
+                    </div>
+                </div>
+                <br>
+                
+        </div>
+    </div>
+        
+        <!-- Footer -->
+	   <footer class="footer" role="contentinfo">
+            <div class="col-md-12 text-center">
+				<p>&copy; Victor Prost - vprost@mit.edu
+                    <br> <a href="mit.edu"> Massachusetts Institute of Technology</a>
+                    <br> <a href="gear.mit.edu"> Global Engineering and Research Laboratory</a>
+                </p>	
+            </div>
+	   </footer>
+	   <!-- End of footer -->
+        
+    </div>
+    <!-- End of Page -->
+    
+	<!-- Javascript inputs to make it smoother and nice -->
+	
+	<!-- jQuery -->
+	<script src="../../js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../../js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../../js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../../js/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="../../js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="../../js/jquery.flexslider-min.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="../../js/main.js"></script>
+
+	</body>
+</html>
+

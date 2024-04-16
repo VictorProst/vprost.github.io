@@ -13,14 +13,21 @@
 /*--- General styles ---*/
 body {
   font-family: "Raleway", Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 17px;
   line-height: 1.5;
-  color: #666666;
+  color: #404040;
   background: white;
   height: 100%;
   position: relative;
 }
+
+@media screen and (max-width: 991px) {
+  body {
+    font-size: 3vw;
+  }
+}
+
 /*------*/
 
 /*--- Link color and hovering color ---*/
@@ -39,15 +46,35 @@ a:hover, a:active, a:focus {
 p {
   margin-bottom: 20px
 }
+
 /*------*/
 
 /*---Titles style, color, font and font weight---*/
-h1, h2, h3, h4, h5, h6, figure {
+h1, h2, h3, h4, h6, figure {
   color: black;
   font-family: "Raleway", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
+h5 {
+  color: black;
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400; 
+}
+h1 span { 
+    background-color: white; 
+    padding:20px 20px; 
+} 
+
+@media screen and (max-width: 991px) {
+  span{
+    font-size: 5vw;
+  }
+        
+    h4,h5{
+        font-size: 2.75vw;
+    }
+}
 
 /*------*/
 
@@ -92,7 +119,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .btn {
   font-family: "Raleway", Arial, sans-serif;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 400;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -107,6 +134,13 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: all 0.3s ease-in-out;
         
 }
+
+@media screen and (max-width: 991px) {
+  .btn {
+    font-size: 3vw;
+  }
+}
+
 .btn.btn-md {
   padding: 20px 20px !important;
 }
@@ -145,8 +179,8 @@ Navigation Bar and Header Style
 
 #navbar .navbar-items {
   height: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 2%;
+  padding-right: 7%;
   float: left;
   width: 100%;
   -webkit-border-radius: 7px;
@@ -190,16 +224,23 @@ Navigation Bar and Header Style
   #navbar nav {
     display: none;
   }
+  #navbar img {
+  height: 13vw;  
+  }
+   #navbar h1 {
+  font-size: 6vw; 
+  margin-top: 7vw;
+  } 
 }
 
 #navbar nav ul {
-  padding: 0;
+  padding-top: 2px;
   margin: 0;
   line-height: 0;
 }
 
 #navbar nav ul li {
-  padding-right: 10px;
+  padding-right: 0px;
   margin: 0;
   list-style: none;
   display: -moz-inline-stack;
@@ -211,7 +252,7 @@ Navigation Bar and Header Style
 #navbar nav ul li a {
   color: black;
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 10px;
   position: relative;
   -webkit-transition: 0.2s;
@@ -295,11 +336,7 @@ Main Page and Side NavBar Style
 }
 
 .offcanvas-visible #fh5co-page {
-  -moz-transform: translateX(-275px);
-  -webkit-transform: translateX(-275px);
-  -ms-transform: translateX(-275px);
-  -o-transform: translateX(-275px);
-  transform: translateX(-275px);
+  z-index: 1;
 }
 
 #fh5co-offcanvas {
@@ -309,10 +346,9 @@ Main Page and Side NavBar Style
   overflow-y: auto;
   position: fixed;
   z-index: 2;
-  top: 0;
-  width: 275px;
-  background: black;
-  padding: 30px;
+  width: 100%;
+  background: rgba(255, 255, 255);
+  padding: 50px;
 }
 @media screen and (max-width: 991px) {
   #fh5co-offcanvas {
@@ -320,18 +356,18 @@ Main Page and Side NavBar Style
   }
 }
 #fh5co-offcanvas ul {
-  padding: 0;
-  margin: 0;
+  margin-top: 20vh;
+  padding-left: 0;
 }
 #fh5co-offcanvas ul li {
-  padding: 0;
   margin: 0 0 10px 0;
   list-style: none;
+  text-align: center;
 }
 #fh5co-offcanvas ul li a {
-  font-size: 20px;
+  font-size: 5vh;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
   text-decoration: none !important;
 }
 #fh5co-offcanvas ul li a:hover {
@@ -366,15 +402,16 @@ Main Page and Side NavBar Style
 }
 
 #fh5co-offcanvas .dropdown-menu {
-  background-color: black;
+  background-color: white;
 }
 
 .fh5co-nav-toggle {
+  padding-top: 12px;
   cursor: pointer;
   text-decoration: none;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-  background: #fff;
+  background: black;
 }
 .fh5co-nav-toggle.dark.active i::before, .fh5co-nav-toggle.dark.active i::after {
   background: #fff;
@@ -387,7 +424,7 @@ Main Page and Side NavBar Style
   position: relative;
   display: -moz-inline-stack;
   display: inline-block;
-  zoom: 1;
+  zoom: 1.2;
   *display: inline;
   width: 30px;
   height: 3px;
@@ -539,9 +576,10 @@ Sections - ABOUT PAGE
     text-align: center;
 }
 
+}
 .section h1 span { 
     background-color: white; 
-    padding:20px 20px; 
+    padding:20px 20px;
 }
 
 .section .home-picture {
@@ -554,13 +592,13 @@ Sections - ABOUT PAGE
 
 
 .section .item-grid {
-  padding-bottom: 10px;
+  padding: 1px 0 1px 0;
+  border-radius: 10px;
   display: block;
-  width: 90%;
+  width: 95%;
   margin: auto;
   position: relative;
-  background: white;
-  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
@@ -572,29 +610,40 @@ Sections - ABOUT PAGE
   overflow: hidden;
   background-size: cover;
   background-position: center center;
-  -webkit-box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.11);
-  -moz-box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.11);
-  box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.20);
+  box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.20);
 }
 
 
 
 .section .item-grid:hover, .section .item-grid:focus {
   text-decoration: none;
-  -webkit-box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.11);
-  -moz-box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.11);
-  box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.20);
+  box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.20);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   position: relative;top: -5px;
   transition: 0.3s;
 }
 
+.section .item{
+    margin-bottom: 40px;
+}
+
 
 @media screen and (max-width: 991px) {
     .section h3,h2,h1{
-         text-align:center;
+        text-align: center;
+        font-size: 4vw;
     }
+    
+    .desc span{
+        text-align: center;
+        font-size: 3vw;
+    }
+    
     .section img{
         margin-bottom: 1em;
     }
@@ -616,53 +665,25 @@ Sections - ABOUT PAGE
 
 ==============================*/
 
-.project {
-	border-bottom:1px dotted #00127C;
-	padding-bottom: 10px;
-    margin-top: -10px;
-}
-
-.project a {
-	color:#000000;
-}
-
-.project h2 {
-    text-align: left;
-    font-size:25px;
-    margin-top: -1px;
-    margin-bottom: 15px;
-    padding: 0;
-    font-weight: 500;
-    border-bottom:none;
-    
-}
-
-.project h3 {
-	font-size:15px;
-	color:#828282;
-	font-style:italic;
-	font-weight:normal;
-    margin: 0 0 20px 0;
-    padding: 0;
-}
-
-.project img:hover {
-	transform: scale(1.02, 1.02);
-}
-
-.project a:hover {
-	color:#A83434;
+.image-gallery img{
+    margin-bottom: 20px;
+    height: 15vw;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 991px) {
-    .project img {
-	   width:50%;
-    }
-    
-    .project h2{
-        text-align: center;
-    }
+   .image-gallery img{
+    margin-bottom: 20px;
+    height: 30vw;
+    object-fit: cover;
 }
+}
+
+
+.projects{
+    padding-bottom: 100px
+}
+
 
 /* ===========================
 
@@ -729,6 +750,12 @@ Sections - ABOUT PAGE
     margin: auto;
 }
 
+@media screen and (max-width: 991px) {
+    .publications{
+        font-size: 3vw;
+    }
+}
+
 /* ===========================
 
         About Box
@@ -773,12 +800,21 @@ Sections - ABOUT PAGE
     .contact p{
         text-align: center;
         padding-left: 0;
+        font-size: 2.5vw;
+    }
+    
+    .contact h3{
+        text-align: center;
+        padding-left: 0;
+        font-size: 3vw;
     }
     
     .contact{
         width: 50%;
         margin: auto;
         padding-left: 0;
+        margin-bottom: 3vh;
+        
     }
 
 }
@@ -796,7 +832,7 @@ Sections - ABOUT PAGE
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.9);
   opacity: 0;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -805,7 +841,7 @@ Sections - ABOUT PAGE
 
 .item .pop-up-overlay .desc {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   bottom: 0;
   right: 0;
@@ -813,12 +849,12 @@ Sections - ABOUT PAGE
   padding: 30px;
 }
 .item .pop-up-overlay .desc h3 {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 1);
   margin-bottom: 10px;
 }
 .item .pop-up-overlay .desc span {
   display: block;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 1);
 }
 .item .pop-up-overlay:hover, .item .pop-up-overlay:focus {
   text-decoration: none;
@@ -826,6 +862,14 @@ Sections - ABOUT PAGE
 .item:hover .pop-up-overlay, .item:focus .pop-up-overlay {
   opacity: 1;
 }
+
+@media screen and (max-width: 991px) {
+.item .pop-up-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+}
+
 
 /* ===========================
  
